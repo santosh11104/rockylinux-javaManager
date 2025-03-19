@@ -82,7 +82,7 @@ echo "Adding cron job..."
 # Step 7: Run npm install in the target directory
 echo "Running npm install in $TARGET_DIR..."
 cd "$TARGET_DIR" || handle_error "Failed to change directory to $TARGET_DIR"
-npm install || handle_error "Failed to run npm install"
+npm install --no-save || handle_error "Failed to run npm install"
 
 echo "Setup complete!"
 
